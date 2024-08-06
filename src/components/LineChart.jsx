@@ -2,17 +2,17 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
 
-// Chart.js plaginlarini o'rnatish
+
 ChartJS.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
 
 const LineChart = ({ data }) => {
-  // JSON ma'lumotlarni grafik uchun tayyorlash
+
   const chartData = {
-    labels: data.map(item => item.date),  // X o'qidagi teglar
+    labels: data.map(item => item.date), 
     datasets: [
       {
         label: 'Value',
-        data: data.map(item => item.value),  // Chiziq uchun ma'lumotlar
+        data: data.map(item => item.value), 
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1,

@@ -5,7 +5,7 @@ const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // JSON ma'lumotlarni olish
+
     fetch('src/data.json')
       .then(response => response.json())
       .then(data => setData(data))
